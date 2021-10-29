@@ -312,19 +312,17 @@ function Header({ history }: { history: any }) {
           >
             {t()}
           </StyledNavLink>
-          <StyledNavLink id={`stake-nav-link`} to={'/uni'} isActive={() => history.location.pathname.includes('/uni')}>
-           
-          </StyledNavLink>
+          <StyledNavLink
+            id={`stake-nav-link`}
+            to={'/uni'}
+            isActive={() => history.location.pathname.includes('/uni')}
+          ></StyledNavLink>
           <StyledNavLink
             id={`stake-nav-link`}
             to={'/vote'}
             isActive={() => history.location.pathname.includes('/vote')}
-          >
-            
-          </StyledNavLink>
-          <StyledExternalLink id={`stake-nav-link`} href={'https://uniswap.info'}>
-             
-          </StyledExternalLink>
+          ></StyledNavLink>
+          <StyledExternalLink id={`stake-nav-link`} href={'https://uniswap.info'}></StyledExternalLink>
         </HeaderLinks>
       </HeaderRow>
       <HeaderControls>
