@@ -6,10 +6,7 @@ import { useOnClickOutside } from '../../hooks/useOnClickOutside'
 import { ApplicationModal } from '../../state/application/actions'
 import { useModalOpen, useToggleModal } from '../../state/application/hooks'
 
-
 import { ButtonPrimary } from '../Button'
-
-
 
 const StyledMenuButton = styled.button`
   width: 100%;
@@ -66,10 +63,6 @@ const MenuFlyout = styled.span`
   `};
 `
 
-
-
-
-
 export default function Menu() {
   const { account } = useActiveWeb3React()
 
@@ -82,14 +75,10 @@ export default function Menu() {
   return (
     // https://github.com/DefinitelyTyped/DefinitelyTyped/issues/30451
     <StyledMenu ref={node as any}>
-      <StyledMenuButton onClick={toggle}>
-        
-      </StyledMenuButton>
+      <StyledMenuButton onClick={toggle}></StyledMenuButton>
 
       {open && (
         <MenuFlyout>
-          
-          
           {account && (
             <ButtonPrimary onClick={openClaimModal} padding="8px 16px" width="100%" borderRadius="12px" mt="0.5rem">
               Claim UNI
