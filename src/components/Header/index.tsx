@@ -333,8 +333,8 @@ function Header({ history }: { history: any }) {
       </HeaderRow>
       <HeaderControls>
         <HeaderElement>
-        <a href="https://twitter.com/mashimainu" ><img  width={'20px'} src={ TwitterLogo} alt="Twitterlogo" /></a>
-        <a href="https://t.me/mashimainu">  <img width={'20px'} src={ TelegramLogo} alt="Telegramlogo" /></a>
+        <a href="https://twitter.com/mashimainu" ><img  width={'30px'} src={ TwitterLogo} alt="Twitterlogo" /></a>
+        <a href="https://t.me/mashimainu">  <img width={'30px'} src={ TelegramLogo} alt="Telegramlogo" /></a>
           <HideSmall>
           
 
