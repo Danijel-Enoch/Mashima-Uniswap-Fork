@@ -9,6 +9,8 @@ import styled from 'styled-components'
 
 import Logo from '../../assets/svg/logo.png'
 import LogoDark from '../../assets/svg/logo.png'
+import TelegramLogo from '../../assets/svg/telegram.png'
+import TwitterLogo from '../../assets/svg/twitter.png'
 import { useActiveWeb3React } from '../../hooks'
 import { useDarkModeManager } from '../../state/user/hooks'
 import { useETHBalances, useAggregateUniBalance } from '../../state/wallet/hooks'
@@ -197,6 +199,7 @@ const UniIcon = styled.div`
   }
 `
 
+
 const activeClassName = 'ACTIVE'
 
 const StyledNavLink = styled(NavLink).attrs({
@@ -294,10 +297,13 @@ function Header({ history }: { history: any }) {
       <HeaderRow>
         <Title href="." style={{}}>
           <UniIcon>
-            <img width={'150px'} src={isDark ? LogoDark : Logo} alt="logo" />
+            <img width={'100px'} src={isDark ? LogoDark : Logo} alt="logo" />
           </UniIcon>
         </Title>
         <HeaderLinks>
+          <UniIcon>
+          
+            </UniIcon>
           <StyledNavLink id={`swap-nav-link`} to={'/swap'} isActive={() => history.location.pathname.includes('/swap')}>
             {t()}
           </StyledNavLink>
@@ -327,7 +333,11 @@ function Header({ history }: { history: any }) {
       </HeaderRow>
       <HeaderControls>
         <HeaderElement>
+        <a href="https://twitter.com/mashimainu" ><img  width={'20px'} src={ TwitterLogo} alt="Twitterlogo" /></a>
+        <a href="https://t.me/mashimainu">  <img width={'20px'} src={ TelegramLogo} alt="Telegramlogo" /></a>
           <HideSmall>
+          
+
             {chainId && NETWORK_LABELS[chainId] && (
               <NetworkCard title={NETWORK_LABELS[chainId]}>{NETWORK_LABELS[chainId]}</NetworkCard>
             )}
