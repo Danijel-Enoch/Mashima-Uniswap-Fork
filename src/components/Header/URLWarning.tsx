@@ -29,16 +29,14 @@ export default function URLWarning() {
   return isMobile ? (
     <PhishAlert isActive={showURLWarning}>
       <div style={{ display: 'flex' }}>
-        <AlertTriangle style={{ marginRight: 0 }} size={0} /> 
-        
+        <AlertTriangle style={{ marginRight: 0 }} size={0} />
       </div>
       <StyledClose size={12} onClick={toggleURLWarning} />
     </PhishAlert>
   ) : window.location.hostname === 'app.uniswap.org' ? (
     <PhishAlert isActive={showURLWarning}>
       <div style={{ display: 'flex' }}>
-        <AlertTriangle style={{ marginRight: 0 }} size={0} /> 
-         
+        <AlertTriangle style={{ marginRight: 0 }} size={0} />
       </div>
       <StyledClose size={12} onClick={toggleURLWarning} />
     </PhishAlert>

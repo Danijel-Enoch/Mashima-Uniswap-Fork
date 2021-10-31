@@ -199,7 +199,6 @@ const UniIcon = styled.div`
   }
 `
 
-
 const activeClassName = 'ACTIVE'
 
 const StyledNavLink = styled(NavLink).attrs({
@@ -301,9 +300,7 @@ function Header({ history }: { history: any }) {
           </UniIcon>
         </Title>
         <HeaderLinks>
-          <UniIcon>
-          
-            </UniIcon>
+          <UniIcon></UniIcon>
           <StyledNavLink id={`swap-nav-link`} to={'/swap'} isActive={() => history.location.pathname.includes('/swap')}>
             {t()}
           </StyledNavLink>
@@ -333,11 +330,14 @@ function Header({ history }: { history: any }) {
       </HeaderRow>
       <HeaderControls>
         <HeaderElement>
-        <a href="https://twitter.com/mashimainu" ><img  width={'30px'} src={ TwitterLogo} alt="Twitterlogo" /></a>
-        <a href="https://t.me/mashimainu">  <img width={'30px'} src={ TelegramLogo} alt="Telegramlogo" /></a>
+          <a href="https://twitter.com/mashimainu">
+            <img width={'30px'} src={TwitterLogo} alt="Twitterlogo" />
+          </a>
+          <a href="https://t.me/mashimainu">
+            {' '}
+            <img width={'30px'} src={TelegramLogo} alt="Telegramlogo" />
+          </a>
           <HideSmall>
-          
-
             {chainId && NETWORK_LABELS[chainId] && (
               <NetworkCard title={NETWORK_LABELS[chainId]}>{NETWORK_LABELS[chainId]}</NetworkCard>
             )}
